@@ -1,0 +1,163 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: roboto, sans-serif;
+  font-weight: 100;
+}
+
+body {
+  margin: 0;
+}
+
+/*Image panels styles*/
+
+*, *:before, *:after {
+  -webkit-box-sizing:inherit;
+          box-sizing:inherit;
+}
+
+.panels {
+  min-height: 80vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.panels:hover {
+  cursor: pointer;
+}
+
+.panel {
+  background: #6B0F9C;
+  -webkit-box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+          box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7, -0.11),
+    background 0.2s,
+    -webkit-box-flex 0.7s cubic-bezier(0.61,-0.19, 0.7, -0.11);
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7, -0.11),
+    background 0.2s,
+    -webkit-box-flex 0.7s cubic-bezier(0.61,-0.19, 0.7, -0.11);
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7, -0.11),
+    background 0.2s;
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7, -0.11),
+    background 0.2s,
+    -webkit-box-flex 0.7s cubic-bezier(0.61,-0.19, 0.7, -0.11),
+    -ms-flex 0.7s cubic-bezier(0.61,-0.19, 0.7, -0.11);
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.panel1 { background-image:url(https://unsplash.it/1500/1500?image=1029); }
+.panel2 { background-image:url(https://unsplash.it/1500/1500?image=864); }
+.panel3 { background-image:url(../images/austin.png); }
+.panel4 { background-image:url(../images/chicago.png); }
+.panel5 { background-image:url(../images/denver.png); }
+
+.panel > * {
+  margin:0;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.panel > *:first-child { -webkit-transform: translateY(-100%); transform: translateY(-100%);}
+.panel.open-active > *:first-child { -webkit-transform: translateY(0); transform: translateY(0);}
+
+.panel > *:last-child { -webkit-transform: translateY(100%); transform: translateY(100%);}
+.panel.open-active > *:last-child { -webkit-transform: translateY(0); transform: translateY(0);}
+
+.panel p {
+
+  font-family: 'Amatic SC', cursive;
+  text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+  font-size: 4em;
+}
+
+.panel.open {
+  font-size: 40px;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+/*nav styles*/
+.nav-wrapper ul li {
+  font-size: 16px;
+}
+
+.brand-logo {
+  margin-left: 10px;
+}
+
+/*promotion styles*/
+
+.about {
+  margin-top: 20px;
+  font-weight: 100;
+}
+
+.material-icons.md-48 {
+  font-size: 56px;
+  color: #ce93d8;
+}
+
+.mission{
+  padding: 35px;
+}
+
+.mission .statement {
+  font-style: italic;
+}
+
+.sponsors {
+  padding: 35px;
+}
+
+.sponsors > h4 {
+  padding-bottom: 15px;
+}
